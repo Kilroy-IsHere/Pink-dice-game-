@@ -1,13 +1,31 @@
 .body{
-    background-color: rgba(136, 96, 44, 0.8);
+    background-color: rgba(142, 7, 93, 0.597);
 }
 
 .central-board{
-    background-color: whitesmoke;
+    display: flex;
     position: fixed;
     top: 20px;
     left: 20px;
     width: 1496px;
     height: 680px;
-    border-radius: 10px;
 }
+
+.left-field, .right-field{
+    border-radius: 10px;
+    width: 748px;
+    height: 680px;
+}
+
+.left-field{
+    background-color: whitesmoke;
+}
+
+.right-field{
+    background-color: rgba(245, 245, 245, 0.886);
+}
+
+.player-one{
+    
+}
+
