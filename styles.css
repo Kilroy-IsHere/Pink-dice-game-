@@ -1,0 +1,13 @@
+.body{
+    background-color: rgba(136, 96, 44, 0.8);
+}
+
+.central-board{
+    background-color: whitesmoke;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 1496px;
+    height: 680px;
+    border-radius: 10px;
+}
