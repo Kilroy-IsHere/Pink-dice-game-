@@ -25,7 +25,43 @@
     background-color: rgba(245, 245, 245, 0.886);
 }
 
-.player-one{
-    
+.player-one, .player-two{
+    background-color: rgba(187, 8, 121, 0.732);
+    width: 260px;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    top: 80px;
+    left: 249px;
+    font-size: 3rem;
+    color:white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
+.player-one{
+    left: 249px;
+}
+
+.player-two{
+    left: 997px;
+}
+
+.total-score-one, .total-score-two{
+    color:rgba(255, 104, 199, 0.597);
+    font-size: 6rem;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    position: fixed;
+    top: 180px;
+}
+
+.total-score-one{
+    left: 325px;
+}
+
+.total-score-two{
+    left: 1080px;
+}
