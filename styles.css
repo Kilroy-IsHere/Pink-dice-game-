@@ -94,7 +94,7 @@
 }
 
 .new-game-btn{
-    
+
 }
 
 .dice{
@@ -107,4 +107,17 @@
 
 .add-score-btn{
 
+}
+
+.btn{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 140px;
+    border: none;
+    background-color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
 }
