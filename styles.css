@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
 .body{
     background-color: rgba(142, 7, 93, 0.597);
+    font-family: 'Lato', sans-serif;
 }
 
 .central-board{
