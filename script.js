@@ -1,14 +1,14 @@
-let buttonTwo = document.getElementById('btn2');
-buttonTwo.addEventListener('click', diceRoll);
+var playersScores, roundScore, currentPlayer, dice;
+playersScores = [0, 0];
+roundScore = 0;
+currentPlayer = 0;
+dice= 0;
 
-function diceRoll(){
-    function randomIntFromInterval(min, max) { // This function will generate a random number between two given numbers (max and min): 1 to 6 here.
-        return Math.floor(Math.random() * (max - min + 1) + min)
-      }
-      const rndInt = randomIntFromInterval(1, 6);
-      return rndInt;
-}
+dice = Math.floor(Math.random()*6)+ 1; //I created a 6 faces dice here using both methods 'random' and 'floor' on Math.
 
-let aaa = diceRoll();
-let firstPlayerScore = document.getElementById('scoreone');
-firstPlayerScore.insertAdjacentText('beforeend', aaa);
+console.log('El dado tirado marca un' + ' ' + dice);
+
+document.querySelector('#current-'+currentPlayer).textContent= dice;
+
+var a = document.querySelector('#current-0').textContent;
+console.log('player score is ' + ' ' + a);
