@@ -22,8 +22,17 @@ document.getElementById('dice-roll').addEventListener('click', function(){
     var img5 = document.getElementById('5.png');
     var img6 = document.getElementById('6.png'); //These are the dice's faces in png which now belong to a variable respectively.
 
+    var imagesArr= [img1, img2, img3, img4, img5, img6];
+    imagesArr[0].style.display = "none";
+    imagesArr[1].style.display = "none";
+    imagesArr[2].style.display = "none";
+    imagesArr[3].style.display = "none";
+    imagesArr[4].style.display = "none";
+    imagesArr[5].style.display = "none"; //We avoid initially all of the .png to show as we need the logic to decide according to the dice's result.
 
-
+    if(dice == 1){
+        imagesArr[0].style.display = "block";
+    }
 
 
 }
