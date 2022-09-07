@@ -30,13 +30,31 @@ document.getElementById('dice-roll').addEventListener('click', function(){
     imagesArr[4].style.display = "none";
     imagesArr[5].style.display = "none"; //We avoid initially all of the .png to show as we need the logic to decide according to the dice's result.
 
-    if(dice == 1){
+    if(dice == 1){ //The logic will decide which .png will be shown acxcording to the result, letting it show by setting the style.display to "block".
         imagesArr[0].style.display = "block";
     }
-
-
+    
+    else if(dice == 2){
+        imagesArr[1].style.display = "block";
+    }
+        
+    else if(dice == 3){
+        imagesArr[2].style.display = "block";
+    }
+    
+    else if(dice == 4){
+        imagesArr[3].style.display = "block";
+    }
+    
+    else if(dice == 5){
+        imagesArr[4].style.display = "block";
+    }
+    
+    else if(dice == 6){
+        imagesArr[5].style.display = "block";
+    }
 }
-)
+);
 
 //
 
