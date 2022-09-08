@@ -50,7 +50,7 @@ document.getElementById('dice-roll').addEventListener('click', function(){
         imagesArr[4].style.display = "block";
     }
     
-    else(dice == 6){
+    else if(dice == 6){
         imagesArr[5].style.display = "block";
     }
 
@@ -59,10 +59,12 @@ document.getElementById('dice-roll').addEventListener('click', function(){
         document.querySelector('#current-' + currentPlayer).textContent = roundScore;
     }
 
-    else {
-        roundScore = 0;
-        document.getElementById('current-0').textContent = 0;
-        document.getElementById('current-1').textContent = 0;
+    else { //But if its result is 1
+        roundScore = 0; // The total earned score shuts to 0, and...
+        document.getElementById('current-0').textContent = 0; //Player 1 current score shuts to 0, and...
+        document.getElementById('current-1').textContent = 0; // Player 2 current score shuts to 0 too, and...
+        document.querySelector('.dice').style.display = 'none'; //Dice show no longer any of its face, and...
+
 
     }
 }
