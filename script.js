@@ -50,8 +50,20 @@ document.getElementById('dice-roll').addEventListener('click', function(){
         imagesArr[4].style.display = "block";
     }
     
-    else if(dice == 6){
+    else(dice == 6){
         imagesArr[5].style.display = "block";
+    }
+
+    if (dice !== 1){ //As long as dice never shows 1, current player will cumulate points, adding the dice's result each time; showing the roundScore on the current score of the active player.
+        roundScore += dice;
+        document.querySelector('#current-' + currentPlayer).textContent = roundScore;
+    }
+
+    else {
+        roundScore = 0;
+        document.getElementById('current-0').textContent = 0;
+        document.getElementById('current-1').textContent = 0;
+
     }
 }
 );
