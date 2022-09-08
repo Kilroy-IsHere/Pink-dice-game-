@@ -64,7 +64,8 @@ document.getElementById('dice-roll').addEventListener('click', function(){
         document.getElementById('current-0').textContent = 0; //Player 1 current score shuts to 0, and...
         document.getElementById('current-1').textContent = 0; // Player 2 current score shuts to 0 too, and...
         document.querySelector('.dice').style.display = 'none'; //Dice show no longer any of its face, and...
-
+        currentPlayer = currentPlayer === 0 ? 1 : 0; // If activePlayer is 0, then switch to 1, resulting on an asignation of 1 to active Player.
+        
 
     }
 }
