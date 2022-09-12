@@ -4,11 +4,11 @@ var playersScores, roundScore, currentPlayer, dice;
 playersScores = [0, 0];
 roundScore = 0;
 currentPlayer = 0;
-dice= 0;
+dice = 0;
 document.getElementById('current-0').textContent= '0';
 document.getElementById('current-1').textContent= '0';
 document.getElementById('total-0').textContent= '0';
-document.getElementById('total-1').textContent= '0'  //Every single variable and <div> concerning scores are set to zero('0' as string for <div> content).
+document.getElementById('total-1').textContent= '0'; //Every single variable and <div> concerning scores are set to zero('0' as string for <div> content).
 
 //DICE
 document.getElementById('dice-roll').addEventListener('click', function(){
@@ -60,20 +60,27 @@ document.getElementById('dice-roll').addEventListener('click', function(){
     }
 
     else { //But if its result is 1
-        roundScore = 0; // The total earned score shuts to 0, and...
-        document.getElementById('current-0').textContent = 0; //Player 1 current score shuts to 0, and...
-        document.getElementById('current-1').textContent = 0; // Player 2 current score shuts to 0 too, and...
-        document.querySelector('.dice').style.display = 'none'; //Dice show no longer any of its face, and...
-        currentPlayer = currentPlayer === 0 ? 1 : 0; // If activePlayer is 0, then switch to 1, resulting on an asignation of 1 to active Player.
-        
-
+        playerChange();
     }
 }
 );
 
-//
+document.getElementById('save-score').addEventListener('click', function (){ //Adds the current dice score to the total player score when clicking on the 'hold-score' button.
+        playersScores[currentPlayer] += roundScore;
 
-document.querySelector('#current-'+currentPlayer).textContent= dice;
+        document.querySelector('#total-' + currentPlayer).textContent = playersScores[currentPlayer];
+        
+);
+function playerChange(){ //Player switching function here:
+    roundScore = 0; // The total earned score shuts to 0, and...
+    document.getElementById('current-0').textContent = 0; //...player 1 current score shuts to 0, and...
+    document.getElementById('current-1').textContent = 0; //...player 2 current score shuts to 0 too, and...
+    document.querySelector('.dice').style.display = 'none'; //...dice show no longer any of its face, and...
+    currentPlayer = currentPlayer === 0 ? 1 : 0; //...if activePlayer is 0, then switch to 1, resulting on an asignation of 1 to active Player.
+};
+
+
+document.querySelector('#current-'+ currentPlayer).textContent= dice;
 
 var a = document.querySelector('#current-0').textContent; //I saved into variable "a" the current dice score for the first player whom div's id is current-0.
 console.log('El resultado del jugador es ' + ' ' + a); 

@@ -51,7 +51,7 @@
     left: 1015px;
 }
 
-.total-score-one, .total-score-two{
+.totalscore-0, .totalscore-1{
     color:rgba(255, 104, 199, 0.597);
     font-size: 6rem;
     width: 150px;
@@ -61,11 +61,11 @@
     top: 180px;
 }
 
-.total-score-one{
+.totalscore-0{
     left: 325px;
 }
 
-.total-score-two{
+.totalscore-1{
     right: 300px;
 }
 
