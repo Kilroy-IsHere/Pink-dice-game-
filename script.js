@@ -5,10 +5,10 @@ playersScores = [0, 0];
 roundScore = 0;
 currentPlayer = 0;
 dice = 0;
-document.getElementById('current-0').textContent= '0';
-document.getElementById('current-1').textContent= '0';
-document.getElementById('total-0').textContent= '0';
-document.getElementById('total-1').textContent= '0'; //Every single variable and <div> concerning scores are set to zero('0' as string for <div> content).
+document.getElementById('current-0').textContent= 0;
+document.getElementById('current-1').textContent= 0;
+document.getElementById('total-0').textContent= 0;
+document.getElementById('total-1').textContent= 0; //Every single variable and <div> concerning scores are set to zero('0' as string for <div> content).
 
 //DICE
 document.getElementById('dice-roll').addEventListener('click', function(){
@@ -69,15 +69,27 @@ document.getElementById('save-score').addEventListener('click', function (){ //A
         playersScores[currentPlayer] += roundScore;
 
         document.querySelector('#total-' + currentPlayer).textContent = playersScores[currentPlayer];
-        
+
         if(playersScores[currentPlayer] >= 100){ //checks if one of any player won the game when he/she reaches 100 points.
-            console.log('Someone won the game');
-            document.querySelector('#name-' + currentPlayer).textContent = "Winner!!";
+            console.log('It looks like someone won the game');
+            document.querySelector('#name-' +currentPlayer).textContent = "Winner!!";
             document.querySelector('.dice').style.display = "none";
             playerChange();
         } else {
             playerChange();
         }
+}
+);
+
+document.getElementById('reset').addEventListener('click', function(){
+    playersScores= [0,0];
+    currentPlayer = 0;
+    roundScore = 0;
+    document.querySelector('.dice').style.display = 'none';
+    document.getElementById('current-0').textContent = 0;
+    document.getElementById('current-1').textContent = 0;
+    document.getElementById('total-0').textContent= 0;
+    document.getElementById('total-1').textContent= 0;
 }
 );
 
