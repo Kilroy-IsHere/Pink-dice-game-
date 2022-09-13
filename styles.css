@@ -28,7 +28,7 @@
     background-color: rgba(245, 245, 245, 0.886);
 }
 
-.player-one, .player-two{
+.player-0, .player-1{
     background-color: rgba(187, 8, 121, 0.732);
     width: 260px;
     height: 80px;
@@ -43,11 +43,11 @@
     align-items: center;
 }
 
-.player-one{
+.player-0{
     left: 249px;
 }
 
-.player-two{
+.player-1{
     left: 1015px;
 }
 

@@ -69,17 +69,19 @@ document.getElementById('save-score').addEventListener('click', function (){ //A
         playersScores[currentPlayer] += roundScore;
 
         document.querySelector('#total-' + currentPlayer).textContent = playersScores[currentPlayer];
-        playerChange();
+        
+        if(playersScores[currentPlayer] >= 100){ //checks if one of any player won the game when he/she reaches 100 points.
+            console.log('Someone won the game');
+            document.querySelector('#name-' + currentPlayer).textContent = "Winner!!";
+            document.querySelector('.dice').style.display = "none";
+            playerChange();
+        } else {
+            playerChange();
+        }
 }
 );
 
-        //checks if one of both players won the game.
-    if (playersScores[currentPlayer] >= 100) {
-        document.querySelector('#name-' + currentPlayer).textContent = " Winner!";
-        document.querySelector('.dice').style.display = "none";
-    } else {
-        playerChange();
-    };
+
 
 function playerChange(){ //Player switching function here:
     roundScore = 0; // The total earned score shuts to 0, and...
