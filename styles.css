@@ -74,14 +74,15 @@
     display: flex;
     position: fixed;
     top: 180px;
+    text-align: center;
 }
 
 .totalscore-0{
-    left: 325px;
+    left: 335px;
 }
 
 .totalscore-1{
-    right: 300px;
+    right: 290px;
 }
 
 .current-score-one, .current-score-two{

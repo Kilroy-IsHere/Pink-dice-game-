@@ -113,6 +113,10 @@ function gameInit(){
     document.getElementById('total-1').textContent= "0"; //Every single variable and <div> concerning scores are set to zero('0' as string for <div> content).
     document.getElementById('name-0').textContent= "Player 1";
     document.getElementById('name-1').textContent= "Player 2";
+    document.querySelector('.player-0').classList.remove('winner');
+    document.querySelector('.player-1').classList.remove('winner');
+    document.querySelector('.player-0').classList.add('player-0');
+    document.querySelector('.player-1').classList.add('player-1');
 }
 
 document.querySelector('#current-'+ currentPlayer).textContent= dice;
