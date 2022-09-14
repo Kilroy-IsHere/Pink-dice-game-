@@ -43,6 +43,21 @@
     align-items: center;
 }
 
+.winner{
+    background-color: rgb(255, 255, 255);
+    width: 260px;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    top: 80px;
+    left: 249px;
+    font-size: 3rem;
+    color:rgb(11, 180, 16);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
 .player-0{
     left: 249px;
 }
